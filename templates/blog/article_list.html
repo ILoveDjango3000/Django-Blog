@@ -1,5 +1,14 @@
+{% load static %}
+
+<img src="{% static 'images_here/firstimg.png' %}" style="width: 400px;">
+<link rel="stylesheet" href="{% static 'blog/css/list.css' %}">
+<link rel = "icon" href ="{% static 'images_here/firstimg.png' %}" type = "image/x-icon">
+
+
 {% for article in article_list %}
   <h1>{{article.title}}</h1>
   <p>{{article.content|safe}}<p>
   <hr>
 {% endfor %}
+
+<script src="{% static 'blog/js/background.js' %}"></script>

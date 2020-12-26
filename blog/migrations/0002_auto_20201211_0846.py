@@ -6,14 +6,10 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('blog', '0001_initial'),
-    ]
+    dependencies = [("blog", "0001_initial")]
 
     operations = [
         migrations.AlterField(
-            model_name='article',
-            name='content',
-            field=ckeditor.fields.RichTextField(),
-        ),
+            model_name="article", name="content", field=ckeditor.fields.RichTextField()
+        )
     ]

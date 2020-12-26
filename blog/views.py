@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import ListView, CreateView
 from django.urls import reverse_lazy
 
@@ -8,7 +7,7 @@ from .models import Article
 
 class HomePageView(ListView):
     model = Article
-    queryset = Article.objects.filter(is_draft = False)
+    queryset = Article.objects.filter(is_draft=False)
     template_name = "blog/article_list.html"
 
 

@@ -1,6 +1,6 @@
 env
 vnv
 db.sqlite3
-*.pyc 
+*.pyc
 
 __pycache__

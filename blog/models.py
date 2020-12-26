@@ -1,8 +1,8 @@
 import os
 import uuid
 
-from django.db import models
 from ckeditor.fields import RichTextField
+from django.db import models
 
 
 def get_file_path(instance, filename):

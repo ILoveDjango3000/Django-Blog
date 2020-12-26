@@ -1,6 +1,7 @@
 from django.urls import path
 
-from .views import HomePageView, ArticleCreate
+from .views import ArticleCreate
+from .views import HomePageView
 
 urlpatterns = [
     path("", HomePageView.as_view(), name="index"),

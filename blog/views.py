@@ -1,5 +1,6 @@
-from django.views.generic import ListView, CreateView
 from django.urls import reverse_lazy
+from django.views.generic import CreateView
+from django.views.generic import ListView
 
 from .forms import ArticleForm
 from .models import Article

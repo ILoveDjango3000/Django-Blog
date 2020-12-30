@@ -114,26 +114,16 @@ STATICFILES_DIRS = [BASE_DIR / "static_dir"]
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_dir')]
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+STATIC_ROOT = BASE_DIR / "static_root"
 
 CKEDITOR_UPLOAD_PATH = "ckeditor"
 
 CKEDITOR_CONFIGS = {
-    "default": {"toolbar": "full"},
-    "mybasic": {"toolbar": "Basic"},
-    # new
+    "default": {"toolbar": "full", "extraPlugins": ",".join(["codesnippet"])},
+    # new If you want custom toolbar
     "custom": {
         "toolbar": "Custom",
-        "toolbar_Custom": [
-            ["Bold", "Italic", "Underline"],
-            [
-                "NumberedList",
-                "BulletedList",
-                "-",
-                "JustifyLeft",
-                "JustifyCenter",
-                "JustifyRight",
-                "JustifyBlock",
-            ],
-        ],
+        "extraPlugins": ",".join(["codesnippet"]),
+        "toolbar_Custom": [["Underline"], ["Link"], ["CodeSnippet"]],
     },
 }

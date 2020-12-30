@@ -116,3 +116,24 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 CKEDITOR_UPLOAD_PATH = "ckeditor"
+
+CKEDITOR_CONFIGS = {
+    "default": {"toolbar": "full"},
+    "mybasic": {"toolbar": "Basic"},
+    # new
+    "custom": {
+        "toolbar": "Custom",
+        "toolbar_Custom": [
+            ["Bold", "Italic", "Underline"],
+            [
+                "NumberedList",
+                "BulletedList",
+                "-",
+                "JustifyLeft",
+                "JustifyCenter",
+                "JustifyRight",
+                "JustifyBlock",
+            ],
+        ],
+    },
+}

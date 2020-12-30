@@ -3,7 +3,7 @@ import sys
 import uuid
 from io import BytesIO
 
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from django.db import transaction
@@ -22,7 +22,7 @@ class Article(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField()
     image = models.ImageField(upload_to=get_file_path, null=True, blank=True)
-    content = RichTextField()
+    content = RichTextUploadingField()
     is_draft = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

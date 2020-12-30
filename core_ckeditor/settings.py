@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "ckeditor",
+    "ckeditor_uploader",
 ]
 
 MIDDLEWARE = [
@@ -116,7 +117,6 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 STATIC_ROOT = BASE_DIR / "static_root"
 
-CKEDITOR_UPLOAD_PATH = "ckeditor"
 
 CKEDITOR_CONFIGS = {
     "default": {
@@ -130,3 +130,5 @@ CKEDITOR_CONFIGS = {
         "toolbar_Custom": [["Underline"], ["Link"], ["CodeSnippet", "Youtube"]],
     },
 }
+
+CKEDITOR_UPLOAD_PATH = "ckeditor_uploads/"

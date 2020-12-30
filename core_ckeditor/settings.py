@@ -119,11 +119,14 @@ STATIC_ROOT = BASE_DIR / "static_root"
 CKEDITOR_UPLOAD_PATH = "ckeditor"
 
 CKEDITOR_CONFIGS = {
-    "default": {"toolbar": "full", "extraPlugins": ",".join(["codesnippet"])},
+    "default": {
+        "toolbar": "full",
+        "extraPlugins": ",".join(["codesnippet", "youtube"]),
+    },
     # new If you want custom toolbar
     "custom": {
         "toolbar": "Custom",
-        "extraPlugins": ",".join(["codesnippet"]),
-        "toolbar_Custom": [["Underline"], ["Link"], ["CodeSnippet"]],
+        "extraPlugins": ",".join(["codesnippet", "youtube"]),
+        "toolbar_Custom": [["Underline"], ["Link"], ["CodeSnippet", "Youtube"]],
     },
 }
